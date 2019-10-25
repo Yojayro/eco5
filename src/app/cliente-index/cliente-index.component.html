@@ -1,0 +1,45 @@
+<div class="container" class="col">
+<nav>
+  
+  <button type="button" class="btn btn-secondary"routerLink="/clienteform" routerLinkActive="active">Nuevo Titulo</button>
+  <br>
+  <br>
+</nav>
+<table class="table-responsive " >
+    <thead class="table table-secondary"> 
+      <tr>
+          <th scope="col">#</th>
+          <td scope="col">Especialidad/carrera</td>
+          <td scope="col">Centro de Estudios</td>
+          <td scope="col">Nivel</td>
+          <td scope="col">SUNEDU</td>
+          <td scope="col">Egreso</td>
+          <td scope="col">Archivo</td>
+          <td scope="col">Opc</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let d of list">
+      <tr class="table-hover">
+          <td scope="row"><span>{{ d.id }}</span></td>
+          <td><span>{{ d.espe }}</span></td>
+          <td> <span>{{ d.centro_estudios }}</span></td>
+          <td><span>{{ d.nivel }}</span></td>
+          <td> <span>{{ d.sunedu }}</span></td>
+          <td><span>{{ d.egreso }}</span></td>
+          <td><button><img src="" alt=""></button></td>  
+          <td><span><button (click)="delete(d.id)"class="btn btn-secondary">Eliminar Titulo</button></span>
+          </td>
+      </tr>
+    </tbody>
+    </table>
+    
+  </div>
+
+
+
+
+  
+    
+
+
+  
